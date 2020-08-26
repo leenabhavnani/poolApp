@@ -1,0 +1,144 @@
+<div class="container">
+  <div class="row">
+    <div class="col border">
+      <h6 class="text-primary">My Expenses</h6>
+      <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+        [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+      </canvas>
+    </div>
+    <div class="col border">
+      <h6 class="text-primary">My Active pools</h6>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr style="font-size:12px;">
+              <th>Pool Name</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="font-size:12px;">
+              <td>Pool_2020_07_02_023</td>
+              <td>02/07/2020k</td>
+              <td>01/01/2021</td>
+              <td>50000</td>
+              <td><button class="btn btn-danger btn-sm">Bid Now</button></td>
+            </tr>
+            <tr style="font-size:12px;">
+              <td>Pool_2020_03_01_012</td>
+              <td>01/03/2020</td>
+              <td>31/08/2020</td>
+              <td>25000</td>
+              <td><button class="btn btn-danger btn-sm" disabled >5 days to Bid</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+      <div class="w-100"></div>
+      <div class="col border">
+        <h6 class="text-primary">My Payments</h6>
+
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr style="font-size:12px;">
+                <th>Date</th>
+                <th>Paid to</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="font-size:12px;">
+                <td>20/07/2020</td>
+                <td>RBS Bank</td>
+                <td>150000</td>
+                <td>Personal funds</td>
+                <td>Pending</td>
+              </tr>
+              <tr style="font-size:12px;">
+                <td>01/07/2020</td>
+                <td>Team Insight</td>
+                <td>50000</td>
+                <td>Joined Pool_2020_07_02_023</td>
+                <td>Successful</td>
+              </tr>
+              <tr style="font-size:12px;">
+                <td>21/06/2020</td>
+                <td>Rbs Bank</td>
+                <td>50000</td>
+                <td>Credit card Bill Payment</td>
+                <td>Successful</td>
+              </tr>
+              <tr style="font-size:12px;">
+                <td>21/05/2020</td>
+                <td>Rbs Bank</td>
+                <td>25000</td>
+                <td>Credit card Bill Payment</td>
+                <td>Successful</td>
+              </tr>
+              <tr style="font-size:12px;">
+                <td>21/04/2020</td>
+                <td>Rbs Bank</td>
+                <td>34000</td>
+                <td>Credit card Bill Payment</td>
+                <td>Successful</td>
+              </tr>
+              <tr style="font-size:12px;">
+                <td>28/02/2020</td>
+                <td>Team Insight</td>
+                <td>60000</td>
+                <td>Joined Pool_2020_03_02_012</td>
+                <td>Successful</td>
+              </tr>
+
+              <!--<tr *ngFor="let userpool of userpoolData">
+              <td>{{userpool.poolName}}</td>
+              <td>{{userpool.amount}}</td>
+              <td>{{userpool.tenorInMonths}}</td>
+              <td><button (click)="userpoolDetails(userpool.id)" class="btn btn-danger">Delete</button>
+                <button (click)="userpoolDetails(userpool.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+              </td>
+            </tr>-->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="col border">
+        <h6 class="text-primary">Messages</h6>
+        <div class="row">
+          <div class="card-deck">
+            <div class="card bg-light" style="width: 10rem; margin-left:55px;margin-top:55px">
+              <div class="card-body">
+                <h6 class="card-title">Get 10% discount on Zomato food orders </h6>
+                <p class="card-text" style="font-size:10px"> with the DigiSmart credit card</p>
+                <a href="#" class="btn btn-primary" style="font-size:10px">Click Me!</a>
+              </div>
+
+            </div>
+            <div class="card bg-light" style="width: 10rem;margin-top:55px">
+              <div class="card-body">
+                <h6 class="card-title">Save monthly with Recurring Deposits.</h6>
+                <p class="card-text" style="font-size:10px"> Take small steps towards your goals every month.</p>
+                <a href="#" class="btn btn-primary" style="font-size:10px">Click Me!</a>
+              </div>
+            </div>
+            <div class="card bg-light" style="width: 10rem; margin-top:55px">
+              <div class="card-body">
+                <h6 class="card-title">Whatsapp Banking</h6>
+                <p class="card-text" style="font-size:10px">Save 70099 70099 and start interacting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

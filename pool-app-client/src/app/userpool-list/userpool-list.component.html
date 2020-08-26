@@ -1,0 +1,120 @@
+
+  <style>
+    /* Modify the background color */
+
+    .tablenew{
+      color: blue;
+      padding: 2px 2px 2px 2px;
+    }
+    .tr{
+      height:10px;
+    }
+    /* Modify brand and text color */
+
+</style>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5>Current Pools</h5>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr style="font-size:12px;">
+        <th>Pool Name</th>
+        <th>Amount</th>
+        <th>Tenor in Months</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Paticipants Joined</th>
+        <th>Actions</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let currentPool of currentPoolData; let o=odd; let e=even" style="font-size:12px;">
+        <td>{{currentPool.PoolName}} </td>
+        <td>{{currentPool.Amount}} </td>
+        <td>{{currentPool.tenure}} </td>
+        <td>{{currentPool.StartDate}} </td>
+        <td>{{currentPool.EndDate}} </td>
+        <td>{{currentPool.Participants}} </td>
+        <td><button class="btn btn-danger btn-sm" *ngIf="e">bid</button>
+          <button class="btn btn-danger btn-sm" disabled *ngIf="o">bid</button>
+          <button  class="btn btn-info btn-sm" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h6>Shortlisted Pools</h6>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr style="font-size:12px;">
+        <th>Pool Name</th>
+        <th>Amount</th>
+        <th>Tenure in Months</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Paticipants Joined</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let shortlisted of shortlistedPoolData ; let o=odd; let e=even" style="font-size:12px;">
+        <td>{{shortlisted.PoolName}} </td>
+        <td>{{shortlisted.Amount}} </td>
+        <td>{{shortlisted.tenure}} </td>
+        <td>{{shortlisted.StartDate}} </td>
+        <td>{{shortlisted.EndDate}} </td>
+        <td>{{shortlisted.Participants}} </td>
+        <td><button class="btn btn-danger btn-sm" *ngIf="o">Make Payment</button>
+          <button class="btn btn-danger btn-sm" disabled *ngIf="e">Make Payment</button>
+          <button  class="btn btn-info btn-sm" style="margin-left: 10px">Details</button>
+        </td>
+        <!--<td *ngIf="!IsActive({{currentPool.Participants}})"><button class="btn btn-danger btn-sm"disabled >{{currentPool.Actions}}</button>
+          <button  class="btn btn-info btn-sm" style="margin-left: 10px">Details</button>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h6>Completed Pools</h6>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr  style="font-size:12px;">
+        <th>Pool Name</th>
+        <th>Start Date </th>
+        <th>End Date</th>
+        <th>Tenor in Months</th>
+        <th>Participants</th>
+        <th>Total Amount invested</th>
+        <th>Total Amount Received</th>
+        <th>Profit</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let completed of completedPoolData" style="font-size:12px;">
+        <td>{{completed.PoolName}} </td>
+        <td>{{completed.StartDate}} </td>
+        <td>{{completed.EndDate}} </td>
+        <td>{{completed.tenure}} </td>
+        <td>{{completed.Participants}} </td>
+        <td>{{completed.AmountInvested}} </td>
+        <td>{{completed.AmountReceived}} </td>
+        <td>{{completed.Profit}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

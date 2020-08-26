@@ -1,0 +1,19 @@
+<p>userpool-details works!</p>
+<h2>Pool Details</h2>
+
+<hr/>
+<div *ngIf="userpool">
+  <div>
+    <label><b>Pool Name: </b></label> {{userpool.poolName}}
+  </div>
+  <div>
+    <label><b>Amount: </b></label> {{userpool.amount}}
+  </div>
+  <div>
+    <label><b>Tenor </b></label> {{userpool.tenorInMonths}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to UserPool List</button><br>

@@ -1,0 +1,90 @@
+
+<style> 
+    /* Modify the background color */ 
+      
+    .tablenew{ 
+      color: blue;
+      padding: 2px 2px 2px 2px;
+    } 
+    .tr{
+      height:10px;
+    }
+    /* Modify brand and text color */ 
+     
+</style> 
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5>Open Pools</h5>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr style="font-size:12px;">
+        <th>Pool Name</th>
+        <th>Amount</th>
+        <th>Tenor in Months</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Paticipants Joined</th>
+        <th>Actions</th>
+        
+      </tr>
+      </thead>
+      <tbody>
+        <tr style="font-size:12px;">
+          <td>Pool_2020_09_01_001</td>
+          <td>50000</td>
+          <td>6</td>
+          <td>1st September 2020</td>
+          <td>28th Feburary 2021</td>
+          <td>User 6, User 9, User 18, User 12, User 23</td>
+          <td><button class="btn btn-info btn-sm">Shortlist</button>
+            <button  class="btn btn-info btn-sm" style="margin-left: 10px">Make Payment</button>
+          </td>
+        </tr>
+        <tr style="font-size:12px;">
+          <td>Pool_2020_10_01_004</td>
+          <td>10000</td>
+          <td>12</td>
+          <td>1st Oct 2020</td>
+          <td>30th September 2021</td>
+          <td>User 16, User 19, User 1, User 2, User 13</td>
+          <td><button  class="btn btn-info btn-sm">Shortlist</button>
+            <button  class="btn btn-info btn-sm" style="margin-left: 10px">Make Payment</button>
+          </td>
+        </tr>
+        <tr style="font-size:12px;">
+            <td>Pool_2020_09_01_012</td>
+            <td>100000</td>
+            <td>6</td>
+            <td>1st September 2020</td>
+            <td>28th Feburary 2021</td>
+            <td>User 6, User 29, User 18, User 15, User 21</td>
+            <td><button class="btn btn-info btn-sm">Shortlist</button>
+              <button  class="btn btn-info btn-sm" style="margin-left: 10px">Make Payment</button>
+            </td>
+          </tr>
+          <tr style="font-size:12px;" >
+            <td>Pool_2020_01_01_012</td>
+            <td>100000</td>
+            <td>6</td>
+            <td>1st January 2020</td>
+            <td>30th June 2021</td>
+            <td>User 6, User 29, User 18, User 15, User 21, User 11</td>
+            <td><button class="btn btn-warning btn-sm">Request to Admin</button>
+             
+            </td>
+          </tr>
+      <!--<tr *ngFor="let userpool of userpoolData">
+        <td>{{userpool.poolName}}</td>
+        <td>{{userpool.amount}}</td>
+        <td>{{userpool.tenorInMonths}}</td>
+        <td><button (click)="userpoolDetails(userpool.id)" class="btn btn-danger">Delete</button>
+          <button (click)="userpoolDetails(userpool.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>-->
+      </tbody>
+    </table>
+  </div>
+</div>

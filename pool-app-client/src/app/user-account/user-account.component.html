@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h5>User Accounts</h5>
+    </div>
+    <div><button (click)="getUserAccountList()" class="btn btn-info btn-sm">Refresh Details</button></div>
+     
+</div>
+
+<div class="panel panel-primary">
+    
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+        <tr style="font-size:12px;">
+            <th>AccountId</th>
+            
+          <th>Account Type</th>
+          <th>Currency</th>
+          <th>Account Sub Type</th>
+          <th>Description</th>
+          <th>Nick Name</th>        
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let account of allAccounts ">
+            <td>{{account.AccountId}}</td>
+           
+          <td>{{account.AccountType}}</td>
+          <td>{{account.Currency}} </td>
+          <td>{{account.AccountSubType}}</td>
+          <td>{{account.Description}}</td>
+          <td>{{account.Nickname}}</td>
+          
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

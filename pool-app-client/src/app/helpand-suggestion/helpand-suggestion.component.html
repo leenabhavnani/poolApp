@@ -1,0 +1,15 @@
+<h1> Help and Suggestions </h1>
+<div class="container">
+  <form action="action()">
+
+    <label for="subject">Subject </label>
+    <input type="text" id="subject" name="subject" [(ngModel)]="subject" placeholder="Please add Subject...">
+
+    <label for="suggestion">Suggestion/Query </label>
+    <textarea id="suggestion" name="subject" [(ngModel)]="suggestion" placeholder="Write something.." style="height:200px"></textarea>
+
+    <button (click)="action()">Submit
+    </button>
+
+  </form>
+</div>

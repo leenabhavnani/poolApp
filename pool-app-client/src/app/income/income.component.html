@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5>Transactions</h5>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr style="font-size:12px;">
+        <th>TransactionId</th>
+        <th>Amount</th>
+        <th>Credited/Debited</th>
+        <th>Status</th>
+        <th>Date and Time</th>
+        <th>BalanceAmount</th>
+        <th>MerchantName</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let transaction of transData">
+        <td>{{transaction.TransactionId}}</td>
+        <td>{{transaction.Amount.Amount}} {{transaction.Amount.Currency}}
+        <td>{{transaction.CreditDebitIndicator}}</td>
+        <td>{{transaction.status}}</td>
+        <td>{{transaction.BookingDateTime}}</td>
+        <td>{{transaction.Balance.Amount.Amount}} {{transaction.Balance.Amount.Currency}}</td>
+        <td>{{transaction.MerchantDetails.MerchantName}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

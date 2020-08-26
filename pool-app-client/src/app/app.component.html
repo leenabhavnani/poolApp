@@ -1,0 +1,171 @@
+<!-- Links -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+  /* Modify the background color */
+
+  .navbar-custom {
+    background-color: #9933CC;
+  }
+
+  /* Modify brand and text color */
+
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-text {
+    color: white;
+  }
+</style>
+
+<div class="navbar-custom ">
+  <nav class="navbar navbar-expand-sm .navbar-custom">
+    <!-- Brand -->
+    <a class="navbar-brand navbar-text " href="#" style="font-family:verdana; font-size:150%;">Team Insight Money
+      Manager</a>
+
+    <!-- Links -->
+
+    <!-- Dropdown -->
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link navbar-text " href="#" data-toggle="tooltip" title="Valid Till:31st Dec 2020"><i class="fa fa-check-square-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></i>
+          Eligibilty Check</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navbar-text " href="#" data-toggle="tooltip" title="My Profile"><i class="fa fa-user fa-fw" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navbar-text " href="#" data-toggle="tooltip" title="Settings!"><i class="fa fa-cog fa-fw" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navbar-text " href="#" data-toggle="tooltip" title="Log Out"><i class="fa fa-sign-out"></i></a>
+      </li>
+
+    </ul>
+
+
+  </nav>
+</div>
+<div>
+
+
+</div>
+<div style="height: 100px;">
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col col-lg-2 ">
+        <ul class="navbar-nav navbar-custom px-3">
+          <li class="nav-item">
+            <a routerLink="dashboard" class="nav-link navbar-text " routerLinkActive="active"><i
+                class="fa fa-binoculars" aria-hidden="true"></i>
+              &nbsp;My Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="getAllUserPools" class="nav-link navbar-text " routerLinkActive="active"><i
+                class="fa fa-list-ul" aria-hidden="true"></i>
+              &nbsp;My Pool List</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="openpools" class="nav-link navbar-text " routerLinkActive="active"><i class="fa fa-life-ring"
+                aria-hidden="true"></i>
+              &nbsp;Open Pools</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="add" class="nav-link navbar-text " routerLinkActive="active"><i class="fa fa-plus-square-o"
+                aria-hidden="true"></i>
+              &nbsp;Add Pool</a>
+          </li>
+
+          <li class="nav-item">
+            <a routerLink="account" class="nav-link navbar-text " routerLinkActive="active"><i class="fa fa-university"
+                aria-hidden="true"></i>
+              &nbsp;Accounts</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="income" class="nav-link navbar-text " routerLinkActive="active">
+              <i class="fa fa-money" aria-hidden="true"></i>
+              &nbsp;Transactions</a>
+          </li>
+         
+          <li class="nav-item">
+            <a routerLink="help" class="nav-link navbar-text " routerLinkActive="active">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              &nbsp;Help and Suggestions</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="faq" class="nav-link navbar-text " routerLinkActive="active">
+              <i class="fa fa-question-circle" aria-hidden="true"></i>
+              &nbsp;FAQ</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-10">
+
+        <div class="card">
+          <div class="card-body">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color: #9933CC;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa fa-facebook white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fa fa-google-plus white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fa fa-linkedin white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fa fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+
+  </footer>
+
+<script>
+  $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
+
+  <!-- Footer -->
